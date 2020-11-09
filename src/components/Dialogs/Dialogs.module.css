@@ -1,0 +1,76 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.dialogsItems {
+    padding: 10px;
+    color: white;
+    text-align: justify;
+    vertical-align: center;
+
+}
+
+.messages {
+    padding: 10px;
+    position:relative;
+}
+
+.button {
+    color: #1D9AF2;
+    background-color: #292D3E;
+    border: 1px solid #1D9AF2;
+    border-radius: 4px;
+    padding: 0 15px;
+    cursor: pointer;
+    height:32px;
+    font-size:14px;
+    transition: all 0.2s ease-in-out;
+}
+.button:hover {
+    transform: scale(1.1);
+}
+
+.item{
+    color: azure;
+    width: 200px;
+    height: 50px;
+    border-radius: 8px;
+    padding: 10px;
+    font-size:18px;
+    font-weight: bold;
+
+}
+
+.item:hover{
+    background: cornflowerblue;
+}
+
+.messageForm{
+    position:absolute;
+    bottom:0;
+    height:80px;
+    width:500px;
+
+}
+
+.messageItem{
+    width: 50%;
+    background: white;
+    color: #292D3E;
+    border-radius: 8px;
+    padding: 10px;
+
+}
+
+.mesageItemContainer{
+    padding: 5px;
+}
+
+.textarea {
+    font: 400 14px Arial;
+    resize: none;
+    width:700px;
+    height:50px;
+
+}

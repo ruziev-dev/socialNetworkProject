@@ -1,0 +1,19 @@
+.loginModule {
+    padding: 10px;
+}
+
+.formSummaryError {
+    border: red 1px solid;
+    padding: 5px;
+    color: red;
+}
+
+
+.captcha{
+    padding: 10px;
+
+}
+
+.captcha img{
+    width: 130px;
+}

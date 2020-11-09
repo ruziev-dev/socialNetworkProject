@@ -1,0 +1,64 @@
+.picture {
+
+}
+
+.picture img{
+    box-sizing: content-box;
+    max-width: 100px;
+}
+.descriptionBlock {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    padding: 10px;
+}
+
+.descriptionBlock img {
+    max-width: 300px;
+    border-radius: 6px
+}
+
+.ava {
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    width: 300px;
+    font-size: 13px;
+    border: 3px solid #cecece;
+    background: #F6F6f6;
+    border-radius: 8px;
+}
+
+.profileDescription {
+    padding-left: 15px;
+    height: 100%;
+    width: 100%;
+    font-size: 13px;
+}
+
+.profileDescription textarea{
+    width: 330px;
+    height: 50px;
+    font: 400 14px Arial;
+    resize: none;
+
+}
+
+.contactItem{
+ color: cornflowerblue;
+}
+
+.formSummaryError{
+color: red;
+}
+
+.formMain{
+    position: relative;
+    margin: 0;
+
+}
+
+.formChild {
+    float: left;
+    padding-left: 5px;
+ }
