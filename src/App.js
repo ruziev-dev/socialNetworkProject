@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import {Switch, BrowserRouter, Route, withRouter} from "react-router-dom";
+import {Switch, HashRouter, Route, withRouter} from "react-router-dom";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import {connect, Provider} from "react-redux";
 import {compose} from "redux";
@@ -66,12 +66,12 @@ let AppContainer = compose(
     withRouter,
     connect(mapStateToProps, {initializeApp}))(App);
 
-const SamuraiJSApp = (props) => {
-    return <BrowserRouter /*basename={process.env.PUBLIC_URL}*/>
+const SamuraiJSApp = () => {
+    return <HashRouter /*basename={process.env.PUBLIC_URL}*/>
         <Provider store={store}>
             <AppContainer/>
         </Provider>
-    </BrowserRouter>
+    </HashRouter>
 }
 
 export default SamuraiJSApp

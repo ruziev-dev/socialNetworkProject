@@ -1,6 +1,5 @@
 import {authAPI} from "../api/api";
 import {stopSubmit} from "redux-form";
-import asyncValidation from "redux-form/lib/asyncValidation";
 
 const SET_USER_DATA = 'samurai-network/auth/SET_USER_DATA';
 const SET_CAPTCHA_URL = 'samurai-network/auth/SET_CAPTCHA_URL';
