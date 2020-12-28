@@ -1,4 +1,14 @@
-const SEND_MESSAGE = 'SEND_MESSAGE';
+const SEND_MESSAGE = 'SEND_MESSAGE'
+
+type DialogType = {
+    id: number
+    name: string
+}
+
+type MessagesType = {
+    id: number
+    message: string
+}
 
 let initialState = {
     dialogs: [
@@ -12,22 +22,25 @@ let initialState = {
         {id: 8, name: 'Витёк'},
         {id: 9, name: 'Евгений'},
         {id: 10, name: 'Евгения'}
-    ],
+    ] as Array<DialogType>,
     messages: [
         {id: 1, message: 'Привет!'},
         {id: 2, message: 'Эти сообщения хранятся в стэйте и не уходят на сервер'},
         {id: 3, message: 'Максимально допустимый размер сообщения 50 символов'}
-    ]
+    ] as Array<MessagesType>
 };
 
-const dialogsReducer = (state = initialState, action) => {
+export type InitialStateType = typeof initialState
+
+const dialogsReducer = (state = initialState,
+                        action: any):InitialStateType => {
 
    switch (action.type) {
       case SEND_MESSAGE:
            let body = action.newMessageBody;
            return {
                ...state,
-               messages: [ ...state.messages,{id: 6, message: body} ]
+               messages: [ ...state.messages,{id: 4, message: body} ]
            };
 
 
@@ -36,7 +49,13 @@ const dialogsReducer = (state = initialState, action) => {
    }
 }
 
-export const sendMessageCreator = (newMessageBody) => ({type: SEND_MESSAGE, newMessageBody})
+type SendMessageCreatorActionType = {
+    type: typeof SEND_MESSAGE
+    newMessageBody: string
+}
+
+export const sendMessageCreator = (newMessageBody:string):SendMessageCreatorActionType =>
+    ({type: SEND_MESSAGE, newMessageBody})
 
 
-export default dialogsReducer;
+export default dialogsReducer

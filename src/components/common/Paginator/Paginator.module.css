@@ -12,6 +12,7 @@
 
 .selectedPage{
     font-weight: bold;
+    text-decoration: underline;
 }
 
 .paginator button {

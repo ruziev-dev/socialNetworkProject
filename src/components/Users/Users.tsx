@@ -1,8 +1,16 @@
 import React from 'react';
 import s from "./Users.module.css";
 import User from "./User";
+import {UserType} from "../../types/types";
 
-let Users = (props) => {
+type PropsTypes = {
+    users: Array<UserType>
+    follow: (userId: number) => void
+    unfollow: (userId: number) => void
+    followingInProgress: Array<number>
+}
+
+let Users: React.FC<PropsTypes> = (props) => {
     return <div className={s.users}>
 
         {
@@ -10,8 +18,8 @@ let Users = (props) => {
                                        key={u.id}
                                        followingInProgress={props.followingInProgress}
                                        follow={props.follow}
-                                       unfollow={props.unfollow} />
-                                       )
+                                       unfollow={props.unfollow}/>
+            )
         }
     </div>
 }
